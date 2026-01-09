@@ -6,6 +6,26 @@ This project builds a machine learning model that detects whether an email is *S
 - sender_score
 - all_caps
 
+Why these models were chosen?
+
+Logistic Regression is a simple linear model commonly used for binary classification problems like spam vs. not spam. It provides fast training and gives interpretable results.
+Random Forest is an ensemble model that combines multiple decision trees. It handles nonlinear relationships, detects feature interactions, and usually gives higher accuracy for tabular data. That’s why both were tested to compare performance.
+
+Feature impact on prediction :
+
+num_links - More links usually increases chance of spam
+num_words - Very small messages can indicate spam
+has_offer - Presence of "special offer" keywords increases spam probability
+sender_score - Lower sender reputation increases spam probability
+all_caps - Messages in ALL CAPS often indicate spam
+
+Possible improvements:
+
+Add more features 
+Use XGBoost or LightGBM
+Do hyperparameter tuning
+Handle class imbalance
+
 ##  Technologies Used
 - Python
 - Scikit-Learn
